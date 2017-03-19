@@ -1,10 +1,12 @@
 Package: diffRgit
-Title: What the Package Does (one line, title case)
+Title: diffRgit
 Version: 0.0.0.9000
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
-Depends: R (>= 3.2.3)
-License: What license is it under?
+Authors@R: person("Adrien", "BOSSI", email = "bossi.adrien@gmail.com", role = c("aut", "cre"))
+Description: an HTML widget for shiny apps.
+Depends: R (>= 3.2.3), htmlwidgets
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1
+Author: Adrien BOSSI [aut, cre]
+Maintainer: Adrien BOSSI <bossi.adrien@gmail.com>
