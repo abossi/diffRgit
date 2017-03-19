@@ -19,7 +19,7 @@
 #' library(diffRgit)
 #'
 #' #get git diff with system('git diff file1 file2", intern = TRUE) instead
-#' diff <- "diff --git a/README.md b/README.md\r\nindex 132c8a2..46909f2 100644\r\n--- a/README.md\r\n+++ b/README.md\r\n@ -98,6 +98,9 @ The HTML output accepts a Javascript object with configuration. Possible options\r\n   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`\r\n   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25\r\n   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`\r\n+  - `templates`: object with previously compiled templates to replace parts of the html\r\n+  - `rawTemplates`: object with raw not compiled templates to replace parts of the html\r\n+  > For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)\r\n \r\n ## Diff2HtmlUI Helper"
+#' diff <- "diff --git a/../diff2widget/file1 b/../diff2widget/file2\nindex ab63d51..eb01961 100644\n--- a/../diff2widget/file1\n+++ b/../diff2widget/file2\n@@ -1,5 +1,4 @@\n-hello!\n+hello world!\n Where is Bryan?\n+Bryan is in the kitchen.\n bye!\n-\n-oups!"
 #' diffRgit(diff)
 #'
 #' #see diff line by line
