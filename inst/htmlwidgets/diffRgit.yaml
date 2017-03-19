@@ -1,0 +1,7 @@
+# (uncomment to add a dependency)
+dependencies:
+  - name: html2widget
+    version: 2.3.0
+    src: htmlwidgets/lib/diff2html-2.3.0
+    script: diff2html.min.js
+    stylesheet: diff2html.min.css
