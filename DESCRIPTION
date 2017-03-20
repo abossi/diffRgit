@@ -1,6 +1,6 @@
 Package: diffRgit
 Title: diffRgit
-Version: 0.0.0.9000
+Version: 1.0.0
 Authors@R: person("Adrien", "BOSSI", email = "bossi.adrien@gmail.com", role = c("aut", "cre"))
 Description: an HTML widget for shiny apps.
 Depends: R (>= 3.2.3), htmlwidgets

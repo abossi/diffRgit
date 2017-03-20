@@ -3,10 +3,13 @@
 #' This function create an HTML widget to diplay a graphic view of a 'git diff' result.
 #'
 #' @param diff the result of a 'git diff'
-#' @param inputFormat 'diff' or 'json'
-#' @param outputFormat 'side-by-side' or 'line-by-line'
-#' @param showFiles boolean to display or not the header with files changed
-#' @param matching 'lines' or 'words'
+#' @param inputFormat the format of the input data: 'diff' or 'json', default is 'diff'
+#' @param outputFormat the format of the output data: 'line-by-line' or 'side-by-side', default is 'side-by-side'
+#' @param showFiles boolean to display or not the header with files changed, default is FALSE
+#' @param matching matching level: 'lines' for matching lines, 'words' for matching lines and words or 'none', default is 'none'
+#' @param synchronisedScroll scroll both panes in side-by-side mode: TRUE or FALSE, default is TRUE
+#' @param matchWordsThreshold similarity threshold for word matching, default is 0.25
+#' @param matchingMaxComparisons perform at most this much comparisons for line matching a block of changes, default is 2500
 #' @param width width of the widget
 #' @param height height of the widget
 #' @param elementId ID of the widget div
@@ -31,14 +34,20 @@
 #' @import htmlwidgets
 #'
 #' @export
-diffRgit <- function(diff, inputFormat = 'diff', outputFormat = 'side-by-side', showFiles = TRUE, matching = "lines", width = NULL, height = NULL, elementId = NULL) {
+diffRgit <- function(diff, inputFormat = 'diff', outputFormat = 'side-by-side',
+                     showFiles = TRUE, matching = "none", synchronisedScroll = TRUE,
+                     matchWordsThreshold = 0.25, matchingMaxComparisons = 2500,
+                     width = NULL, height = NULL, elementId = NULL) {
 
   # create a list that contains the settings
   settings <- list(
     inputFormat = inputFormat,
     outputFormat = outputFormat,
     showFiles = showFiles,
-    matching = matching
+    matching = matching,
+    synchronisedScroll = synchronisedScroll,
+    matchWordsThreshold = matchWordsThreshold,
+    matchingMaxComparisons = matchingMaxComparisons
   )
 
   # forward options using x

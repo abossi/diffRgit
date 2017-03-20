@@ -14,9 +14,12 @@ HTMLWidgets.widget({
           inputFormat : x.settings.inputFormat,
           outputFormat : x.settings.outputFormat,
           showFiles : x.settings.showFiles,
-          matching : x.settings.matching
+          matching : x.settings.matching,
+          synchronisedScroll : x.settings.synchronisedScroll,
+          matchWordsThreshold : x.settings.matchWordsThreshold,
+          matchingMaxComparisons : x.settings.matchingMaxComparisons
         });
-        
+
       },
 
       resize: function(width, height) {

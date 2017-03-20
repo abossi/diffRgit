@@ -5,19 +5,26 @@
 \title{Create an HTML git diff widget using the diff2html library}
 \usage{
 diffRgit(diff, inputFormat = "diff", outputFormat = "side-by-side",
-  showFiles = TRUE, matching = "lines", width = NULL, height = NULL,
-  elementId = NULL)
+  showFiles = TRUE, matching = "none", synchronisedScroll = TRUE,
+  matchWordsThreshold = 0.25, matchingMaxComparisons = 2500, width = NULL,
+  height = NULL, elementId = NULL)
 }
 \arguments{
 \item{diff}{the result of a 'git diff'}
 
-\item{inputFormat}{'diff' or 'json'}
+\item{inputFormat}{the format of the input data: 'diff' or 'json', default is 'diff'}
 
-\item{outputFormat}{'side-by-side' or 'line-by-line'}
+\item{outputFormat}{the format of the output data: 'line-by-line' or 'side-by-side', default is 'side-by-side'}
 
-\item{showFiles}{boolean to display or not the header with files changed}
+\item{showFiles}{boolean to display or not the header with files changed, default is FALSE}
 
-\item{matching}{'lines' or 'words'}
+\item{matching}{matching level: 'lines' for matching lines, 'words' for matching lines and words or 'none', default is 'none'}
+
+\item{synchronisedScroll}{scroll both panes in side-by-side mode: TRUE or FALSE, default is TRUE}
+
+\item{matchWordsThreshold}{similarity threshold for word matching, default is 0.25}
+
+\item{matchingMaxComparisons}{perform at most this much comparisons for line matching a block of changes, default is 2500}
 
 \item{width}{width of the widget}
 
