@@ -35,14 +35,14 @@ All parameters are directly send to diff2html function to be compatible with fut
 library(diffRgit)
 
 #get git diff with system('git diff file1 file2", intern = TRUE) instead
-diff <- "diff --git a/../diff2widget/file1 b/../diff2widget/file2\\nindex ab63d51..eb01961 100644\\n--- a/../diff2widget/file1\\n+++ b/../diff2widget/file2\\n@ -1,5 +1,4 @\\n-hello!\\n+hello world!\\n Where is Bryan?\\n+Bryan is in the kitchen.\\n bye!\\n-\\n-oups!"
-diffRgit(diff)
+l_diff <- "diff --git a/../diff2widget/file1 b/../diff2widget/file2\\nindex ab63d51..eb01961 100644\\n--- a/../diff2widget/file1\\n+++ b/../diff2widget/file2\\n@ -1,5 +1,4 @\\n-hello!\\n+hello world!\\n Where is Bryan?\\n+Bryan is in the kitchen.\\n bye!\\n-\\n-oups!"
+diffRgit(l_diff)
 
 #see diff line by line
-diffRgit(diff, outputFormat = 'line-by-line')
+diffRgit(l_diff, outputFormat = 'line-by-line')
 
 #remove header
-diffRgit(diff, showFiles = FALSE)
+diffRgit(l_diff, showFiles = FALSE)
 
 }
 \references{

@@ -17,9 +17,9 @@ Install the dependencies:
 ### Exemple
 
 ```sh
-> diff <- "diff --git a/../diff2widget/file1 b/../diff2widget/file2\nindex ab63d51..eb01961 100644\n--- a/../diff2widget/file1\n+++ b/../diff2widget/file2\n@@ -1,5 +1,4 @@\n-hello!\n+hello world!\n Where is Bryan?\n+Bryan is in the kitchen.\n bye!\n-\n-oups!"
+> l_diff <- "diff --git a/../diff2widget/file1 b/../diff2widget/file2\nindex ab63d51..eb01961 100644\n--- a/../diff2widget/file1\n+++ b/../diff2widget/file2\n@@ -1,5 +1,4 @@\n-hello!\n+hello world!\n Where is Bryan?\n+Bryan is in the kitchen.\n bye!\n-\n-oups!"
 
-> diffRgit(diff)
+> diffRgit(l_diff)
 ```
 
 result:
